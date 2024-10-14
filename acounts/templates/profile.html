@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Profile{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card bg-light p-4">
+        <h2 class="text-center text-dark">Your Profile</h2>
+
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>{{ message }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+
+        <div class="mb-3">
+           
+        </div>
+        <div class="mb-3">
+            <strong>Email:</strong> {{ user.email }}
+        </div>
+        <div class="mb-3">
+            <strong>Phone Number:</strong> {{ user.phonenumber }}
+        </div>
+        <div class="mb-3">
+            <strong>Joined On:</strong> {{ user.date_joined|date:"D, d M Y" }}
+        </div>
+
+        <div class="text-center mt-4">
+
+            <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

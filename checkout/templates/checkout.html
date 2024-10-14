@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_js %}
+<script type="text/javascript" src="https://js.stripe.com/v3/"></script>
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        var stripe = Stripe('{{ publishable }}');
+        var elements = stripe.elements();
+
+        var style = {
+            base: {
+                color: "#32325d",
+                fontFamily: '"Poppins", sans-serif',
+                fontSmoothing: "antialiased",
+                fontSize: "18px",
+                "::placeholder": {
+                    color: "#a0aec0"
+                }
+            },
+            invalid: {
+                color: "#ff5252",
+                iconColor: "#ff5252"
+            }
+        };
+
+        var card = elements.create("card", { style: style });
+        card.mount("#card-element");
+
+        card.on('change', function(event) {
+            var displayError = document.getElementById('card-errors');
+            if (event.error) {
+                displayError.textContent = event.error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+
+        var form = document.getElementById('payment-form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            stripe.createToken(card).then(function(result) {
+                if (result.error) {
+                    var errorElement = document.getElementById('card-errors');
+                    errorElement.textContent = result.error.message;
+                } else {
+                    var hiddenInput = document.createElement('input');
+                    hiddenInput.setAttribute('type', 'hidden');
+                    hiddenInput.setAttribute('name', 'stripeToken');
+                    hiddenInput.setAttribute('value', result.token.id);
+                    form.appendChild(hiddenInput);
+                    form.submit();
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h2 class="display-4 text-primary font-weight-bold">Total Order Price</h2>
+            <p class="lead text-muted mb-4">Total amount of your shopping basket:</p>
+            <h3 class="font-weight-bold text-dark">{{ total }}</h3>
+            <hr class="my-4">
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form id="payment-form" method="post" action="{% url 'checkout' %}">
+                {% csrf_token %}
+                <legend class="mb-4 font-weight-bold text-primary">Payment Details</legend>
+
+                <div id="card-element" class="form-group border rounded-lg p-3 shadow-sm" style="background: #f7f7f7;">
+                    <!-- Stripe card input -->
+                </div>
+
+                <div id="card-errors" role="alert" class="text-danger mt-2"></div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-lg btn-primary rounded-pill px-5 py-2 shadow-sm" style="background: linear-gradient(90deg, #1dbfaf, #228be6);">Submit Payment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

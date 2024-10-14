@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <h2>Your Cart</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in cart_items %}
+            <tr>
+                <td><img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" style="height: 50px;"></td>
+                <td>{{ item.product.name }}</td>
+                <td>
+                    <form method="POST" action="{% url 'adjust_cart' item.product.id %}">
+                        {% csrf_token %}
+                        <input type="number" name="quantity" value="{{ item.quantity }}" min="1">
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
+                </td>
+                <td>₹{{ item.total_price }}</td>
+                <td>
+                    <form method="POST" action="{% url 'adjust_cart' item.product.id %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="quantity" value="0">
+                        <button type="submit" class="btn btn-danger">Remove</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="cart-total">
+        <h3>Total: ₹{{ total }}</h3>
+        <a href="{% url 'checkout' %}" class="btn btn-success">Checkout</a>
+    </div>
+</div>
+{% endblock %}
