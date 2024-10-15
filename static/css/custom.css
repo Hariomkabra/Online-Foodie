@@ -1,0 +1,327 @@
+body {
+    font-family: Arial;
+    padding-top: 100px;
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #ededed;
+    color: #fff;
+    background-color: black; 
+    flex-shrink: 0;
+}
+
+
+.container-fluid{
+    background-color: black; 
+    margin-top: 250px; 
+}
+
+.col-md-12 a{
+    font-size: 25px; 
+    font-weight: bold; 
+    
+}
+
+.col-md-4{
+    font-family: calibri; 
+    font-size: 18px; 
+}
+
+h3{
+    color: red; 
+}
+
+.icon-bar {
+    background-color: #fff;
+}
+
+.accountform {
+    padding-top: 20px;
+}
+
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+    background-color: #c67605;
+}
+
+.product {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+caption p {
+    word-wrap: break-word;
+}
+
+.row.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.panel-default {
+    border-color: transparent;
+    padding: 0 10px;
+}
+
+.panel-body {
+    height: 100%;
+    border: 1px solid #ddd;
+}
+
+.product-description {
+    min-height: 40px;
+}
+
+.main-logo {
+    margin-bottom: 25px;
+}
+
+h1, .h1 {
+    color:red;
+}
+
+.navbar{
+    background-image: linear-gradient(#000, #000 60%, #000);
+}
+
+/*--------------------------------------------Footer*/
+
+footer {
+    background-color: #262626;
+    color: #ffffff;
+    font-size: 25px;
+    min-height: 120px;
+    display: table;
+    text-align: center; 
+    margin-left: auto;
+    margin-right: auto; 
+    width: 100%;
+    clear: both;
+    height: 40px;
+
+}
+    
+footer .cv-pdf i {
+    color: #fafafa;
+    text-align: center;
+    font-size: 25px;
+    padding-left: 5px;
+}
+
+footer .cv-pdf i:hover {
+    color: #33ffad;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links {
+    padding-bottom: 15px;
+}
+
+.social-links li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: #fafafa;
+    background: #8f8f8f;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+    background: #33ffad; 
+}
+
+#footer-details {
+    margin: 20px;
+
+}
+
+
+/* Custom CSS for Foodie Project */
+
+/* Ensures the navbar remains visible and distinct */
+.navbar {
+    background-color: #343a40 !important; /* Dark theme */
+    padding: 1rem;
+}
+
+/* Navbar links appearance */
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107 !important; /* Highlight on hover */
+}
+
+/* Adjusting hero section */
+.hero-section {
+    position: relative;
+    height: 500px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section h1, .hero-section p {
+    font-weight: 600;
+}
+
+.hero-section .btn {
+    padding: 0.75rem 2rem;
+    font-size: 1.25rem;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #343a40;
+    padding: 2rem 0;
+    color: #ffffff;
+}
+
+footer h5 {
+    font-weight: 600;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #ffc107;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 350px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .hero-section .btn {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+h2.display-4 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+}
+
+button.btn-primary {
+    transition: background 0.3s ease;
+}
+
+button.btn-primary:hover {
+    background: linear-gradient(90deg, #228be6, #1dbfaf);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#card-element {
+    border: 2px solid #e2e8f0;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    transition: border-color 0.2s;
+}
+
+#card-element:focus {
+    border-color: #63b3ed;
+}
+
+#card-errors {
+    font-size: 14px;
+    color: #ff5252;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.lead {
+    font-size: 1.2rem;
+}
+
+
+/*--------------------------------------------Media Queries*/
+
+@media screen and (max-width:800px) {
+    .second-logo {display:none}
+}
+
+@media screen and (max-width:800px) {
+    .main-foto {display:none}
+}
+
+.container-fluid .navbar-brand {
+    color: white;
+}
+
+.navbar-default .navbar-brand{
+    color: white; 
+}
+.navbar-default .navbar-brand a{
+    color: white; 
+}
+
+.navbar-default .navbar-nav > li > a{
+    color: white; 
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 14px;
+}
