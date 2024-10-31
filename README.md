@@ -59,5 +59,13 @@ License:
 This project is open-source and licensed under the MIT License.
 
 Future Enhancements:
-User Profiles: Implement user login and profiles for saving past orders and preferences.
+User Profiles: Implement user login and profiles to save past orders and preferences.
 Discount and Offers: Integrate a discount system for promotions and coupon codes.
+
+
+ScreenShots:
+![Foodie01](https://github.com/user-attachments/assets/446dcd02-b76c-41dd-bcfc-2b35f03ea4ec)
+![Foodie02](https://github.com/user-attachments/assets/b16eb9ca-b3e5-4c76-931f-584035c3a702)
+![Foodie03](https://github.com/user-attachments/assets/6706f298-3fe7-4f65-80f7-3b64a9546eea)
+![Foodie04](https://github.com/user-attachments/assets/b00959ae-e643-4660-b850-94d700b6afe3)
+![Foodie06](https://github.com/user-attachments/assets/47586748-5c82-41d6-86a4-2dbec5d953ee)
