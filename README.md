@@ -69,3 +69,9 @@ ScreenShots:
 ![Foodie03](https://github.com/user-attachments/assets/6706f298-3fe7-4f65-80f7-3b64a9546eea)
 ![Foodie04](https://github.com/user-attachments/assets/b00959ae-e643-4660-b850-94d700b6afe3)
 ![Foodie06](https://github.com/user-attachments/assets/47586748-5c82-41d6-86a4-2dbec5d953ee)
+
+Administration:
+![food bk](https://github.com/user-attachments/assets/4bf35984-fccb-4dc3-ad1d-57e951971e57)
+![food bk01](https://github.com/user-attachments/assets/269ce1c7-80b8-42ef-badf-cd0dd32467c5)
+
+
