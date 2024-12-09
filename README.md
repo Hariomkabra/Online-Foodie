@@ -26,7 +26,7 @@ Deployment: Ready for deployment on platforms that support Django
 Installation and Setup:
 
 1.Clone the Repository:
-git clone https://github.com/your-username/online-food-delivery-site.git
+git clone https://github.com/HariomKabra/online-food-delivery-site.git
 
 2.Navigate to the project directory:
 cd online-food-delivery-site
